@@ -17,7 +17,6 @@ class AppServiceProvider extends ServiceProvider
     {
         //
     }
-
     /**
      * Bootstrap any application services.
      *
@@ -27,5 +26,6 @@ class AppServiceProvider extends ServiceProvider
     {
         if (App::environment(['staging', 'production'])) {
             URL::forceScheme('https');
+        }
     }
 }
